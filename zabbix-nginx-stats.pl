@@ -53,11 +53,12 @@ my $statuscount = {
 	'301' => 0,
 	'302' => 0,
 	'200' => 0,
+	'400' => 0,
 	'404' => 0,
 	'403' => 0,
 	'500' => 0,
+	'502' => 0,
 	'503' => 0,
-
 	'other' => 0,
 };
 
@@ -134,7 +135,7 @@ sub sendstat {
 
   my $hostparam = defined $cfg->{host} ? ' -s "'.$cfg->{host}.'" ':'';
   print $datafh (defined $cfg->{host} ? $cfg->{host} : '-') . " nginx[$key] $value\n";
-  
+
   #my $cmd = "$ZABBIX_SENDER $hostparam -c $ZABBIX_CONF -k \"nginx[$key]\" -o \"$value\" >/dev/null";
   #if ($DEBUG) {
   #  print $cmd . "\n";
