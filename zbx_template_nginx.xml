@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>2.0</version>
-    <date>2013-07-26T10:17:46Z</date>
+    <version>3.4</version>
+    <date>2018-02-28T07:24:33Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -9,8 +9,9 @@
     </groups>
     <templates>
         <template>
-            <template>Nginx</template>
-            <name>Nginx</name>
+            <template>Template Status NGINX</template>
+            <name>Template Status NGINX</name>
+            <description/>
             <groups>
                 <group>
                     <name>Templates</name>
@@ -20,35 +21,30 @@
                 <application>
                     <name>Nginx</name>
                 </application>
-                <application>
-                    <name>Zabbix</name>
-                </application>
             </applications>
             <items>
                 <item>
                     <name>Nginx:Perhour Requestcount</name>
                     <type>15</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx.perhour.requestcount</key>
                     <delay>600</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params>sum(nginx[requestcount], 3600)</params>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -63,31 +59,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx:Perhour Request Time Avg</name>
                     <type>15</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx.perhour.request_time.avg</key>
                     <delay>600</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params>sum(nginx[request_time_sum], 3600)/sum(nginx[request_time_count], 3600)</params>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -102,31 +100,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx:Perhour Upstream Time Avg</name>
                     <type>15</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx.perhour.upstream_time.avg</key>
                     <delay>600</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params>sum(nginx[upstream_time_sum], 3600)/sum(nginx[upstream_time_count], 3600)</params>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -141,31 +141,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx bytes avg</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[body_bytes_sent_avg]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>b</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -180,31 +182,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx bytes sum</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[body_bytes_sent_sum]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>b</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -219,31 +223,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx ignored</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[ignored]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -258,31 +264,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx oldcount</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[oldcount]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -297,31 +305,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx parseerrors</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[parseerrors]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -336,31 +346,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx requestcount</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[requestcount]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -375,31 +387,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx request_time_avg</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[request_time_avg]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -414,31 +428,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx request_time_count</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[request_time_count]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -453,31 +469,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx request_time_mean</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[request_time_mean]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -492,31 +510,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx request_time_median</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[request_time_median]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -531,31 +551,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx request_time_percentile25</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[request_time_percentile25]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -570,31 +592,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx request_time_percentile80</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[request_time_percentile80]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -609,31 +633,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx request_time_percentile90</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[request_time_percentile90]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -648,31 +674,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx request_time_sum</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[request_time_sum]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -687,31 +715,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx status_200</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[status_200]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -726,31 +756,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx status_301</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[status_301]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -765,31 +797,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx status_302</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[status_302]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -804,31 +838,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx status_400</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[status_400]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -843,31 +879,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx status_403</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[status_403]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -882,31 +920,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx status_404</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[status_404]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -921,31 +961,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx status_500</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[status_500]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -960,31 +1002,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx status_502</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[status_502]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -999,31 +1043,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx status_503</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[status_503]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -1038,31 +1084,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx status_other</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[status_other]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -1077,31 +1125,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx upstream_time_avg</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[upstream_time_avg]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -1116,31 +1166,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx upstream_time_count</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[upstream_time_count]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -1155,31 +1207,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx upstream_time_mean</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[upstream_time_mean]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -1194,31 +1248,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx upstream_time_median</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[upstream_time_median]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -1233,31 +1289,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx upstream_time_percentile25</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[upstream_time_percentile25]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -1272,31 +1330,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx upstream_time_percentile80</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[upstream_time_percentile80]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -1311,31 +1371,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx upstream_time_percentile90</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[upstream_time_percentile90]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -1350,31 +1412,33 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
                 <item>
                     <name>Nginx upstream_time_sum</name>
                     <type>2</type>
                     <snmp_community/>
-                    <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>nginx[upstream_time_sum]</key>
                     <delay>0</delay>
-                    <history>90</history>
-                    <trends>365</trends>
+                    <history>90d</history>
+                    <trends>365d</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units>ms</units>
-                    <delta>0</delta>
+                    <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
                     <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
-                    <data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -1389,9 +1453,14 @@
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
                 </item>
             </items>
             <discovery_rules/>
+            <httptests/>
             <macros/>
             <templates/>
             <screens/>
@@ -1399,34 +1468,84 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Nginx:nginx[parseerrors].last(0)}&gt;0</expression>
+            <expression>{Template Status NGINX:nginx[status_502].last()}&gt;1</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Backend Processes are dead on {HOST.NAME}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template Status NGINX:nginx[parseerrors].last(0)}&gt;0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
             <name>Logfile had lines which lead to parseerrors</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
             <url/>
             <status>0</status>
             <priority>2</priority>
             <description/>
             <type>0</type>
+            <manual_close>0</manual_close>
             <dependencies/>
+            <tags/>
         </trigger>
         <trigger>
-            <expression>{Nginx:nginx[oldcount].last(0)}&gt;0</expression>
+            <expression>{Template Status NGINX:nginx[oldcount].last(0)}&gt;0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
             <name>Old Logfile lines were ignore</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
             <url/>
             <status>0</status>
             <priority>2</priority>
             <description/>
             <type>0</type>
+            <manual_close>0</manual_close>
             <dependencies/>
+            <tags/>
         </trigger>
         <trigger>
-            <expression>{Nginx:nginx[status_500].last(0)} +  {Nginx:nginx[status_503].last(0)} + {Nginx:nginx[status_403].last(0)}&gt;4</expression>
-            <name>Too many errors: 500, 503 and 403</name>
+            <expression>{Template Status NGINX:nginx[status_400].last(0)} + {Template Status NGINX:nginx[status_403].last(0)} + {Template Status NGINX:nginx[status_404].last(0)}&gt;100</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Too many client errors found : 400, 403 and 404</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
             <url/>
             <status>0</status>
             <priority>2</priority>
             <description/>
             <type>0</type>
+            <manual_close>0</manual_close>
             <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template Status NGINX:nginx[status_500].last(0)} +  {Template Status NGINX:nginx[status_502].last(0)} + {Template Status NGINX:nginx[status_403].last(0)}&gt;10</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Too many server errors found : 500, 502 and 503</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
         </trigger>
     </triggers>
     <graphs>
@@ -1449,15 +1568,15 @@
             <ymax_item_1>0</ymax_item_1>
             <graph_items>
                 <graph_item>
-                    <sortorder>8</sortorder>
+                    <sortorder>0</sortorder>
                     <drawtype>0</drawtype>
-                    <color>ACDBC8</color>
+                    <color>00CC00</color>
                     <yaxisside>0</yaxisside>
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Nginx</host>
-                        <key>nginx[status_400]</key>
+                        <host>Template Status NGINX</host>
+                        <key>nginx[status_200]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1468,32 +1587,8 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Nginx</host>
+                        <host>Template Status NGINX</host>
                         <key>nginx[status_404]</key>
-                    </item>
-                </graph_item>
-                <graph_item>
-                    <sortorder>6</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>C8C8C8</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Nginx</host>
-                        <key>nginx[status_301]</key>
-                    </item>
-                </graph_item>
-                <graph_item>
-                    <sortorder>0</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>00CC00</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Nginx</host>
-                        <key>nginx[status_200]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1504,44 +1599,8 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Nginx</host>
+                        <host>Template Status NGINX</host>
                         <key>nginx[status_500]</key>
-                    </item>
-                </graph_item>
-                <graph_item>
-                    <sortorder>7</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>77BA0C</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Nginx</host>
-                        <key>nginx[status_502]</key>
-                    </item>
-                </graph_item>
-                <graph_item>
-                    <sortorder>5</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>00C8C8</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Nginx</host>
-                        <key>nginx[status_other]</key>
-                    </item>
-                </graph_item>
-                <graph_item>
-                    <sortorder>4</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>C800C8</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Nginx</host>
-                        <key>nginx[status_503]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1552,8 +1611,44 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Nginx</host>
+                        <host>Template Status NGINX</host>
                         <key>nginx[status_403]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>4</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>C800C8</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Status NGINX</host>
+                        <key>nginx[status_503]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>5</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>00C8C8</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Status NGINX</host>
+                        <key>nginx[status_other]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>6</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>C8C8C8</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Status NGINX</host>
+                        <key>nginx[status_301]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1564,8 +1659,32 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Nginx</host>
+                        <host>Template Status NGINX</host>
                         <key>nginx[status_302]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>7</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>77BA0C</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Status NGINX</host>
+                        <key>nginx[status_502]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>8</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>ACDBC8</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Status NGINX</host>
+                        <key>nginx[status_400]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -1589,18 +1708,6 @@
             <ymax_item_1>0</ymax_item_1>
             <graph_items>
                 <graph_item>
-                    <sortorder>1</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>00C800</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>Nginx</host>
-                        <key>nginx[upstream_time_avg]</key>
-                    </item>
-                </graph_item>
-                <graph_item>
                     <sortorder>0</sortorder>
                     <drawtype>0</drawtype>
                     <color>C80000</color>
@@ -1608,8 +1715,20 @@
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
-                        <host>Nginx</host>
+                        <host>Template Status NGINX</host>
                         <key>nginx[request_time_avg]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>00C800</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Status NGINX</host>
+                        <key>nginx[upstream_time_avg]</key>
                     </item>
                 </graph_item>
             </graph_items>
