@@ -1481,7 +1481,7 @@
                     <type>0</type>
                     <item>
                         <host>Nginx</host>
-                        <key>nginx[status_302]</key>
+                        <key>nginx[status_301]</key>
                     </item>
                 </graph_item>
                 <graph_item>
