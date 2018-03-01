@@ -134,7 +134,7 @@ sub sendstat {
   my ($key, $value, $cfg) = @_;
 
   my $hostparam = defined $cfg->{host} ? ' -s "'.$cfg->{host}.'" ':'';
-  print $datafh (defined $cfg->{host} ? $cfg->{host} : '-') . " nginx[$key] $value\n";
+  print $datafh (defined $cfg->{host} ? $cfg->{host} : '-') . " nginx.$key $value\n";
 
   #my $cmd = "$ZABBIX_SENDER $hostparam -c $ZABBIX_CONF -k \"nginx[$key]\" -o \"$value\" >/dev/null";
   #if ($DEBUG) {
